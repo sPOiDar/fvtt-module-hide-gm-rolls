@@ -1,7 +1,7 @@
 {
   "name": "hide-gm-rolls",
   "title": "Hide GM Rolls",
-  "description": "Allows sanitizing public GM rolls by hiding formulas and breakdowns from players, showing just the total instead. Can also hide private GM rolls from players entirely.",
+  "description": "<p>Some GMs prefer to limit the information that players receive, to maintain the mystery. For example you may wish to hide the bonuses that your legendary creature gets on its rolls, or to roll truly in the blind when an event occurs, without alerting your players to it.</p<p>This module allows sanitizing public GM rolls by hiding formulas and breakdowns from players, showing just the total instead. It can also hide private GM rolls from players entirely.</p>",
   "author": [
     "sPOiDar"
   ],
