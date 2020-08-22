@@ -90,7 +90,7 @@ jobs:
         env:
           NEW_TAG: ${{ steps.calculate_version.outputs.new_tag }}
         run: |
-          zip -r /tmp/module.zip . -x .git*
+          zip -r /tmp/module.zip . -x .git\*
 
       - name: Upload Release Asset
         id: upload_release_asset
