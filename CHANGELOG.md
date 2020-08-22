@@ -1,3 +1,13 @@
+## [0.1.3](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.1.2...v0.1.3) (2020-08-22)
+
+
+### Bug Fixes
+
+* **docs:** Typo in module description ([b13cc0e](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/b13cc0e))
+
+
+
+
 ## [0.1.2](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.1.1...v0.1.2) (2020-08-22)
 
 
