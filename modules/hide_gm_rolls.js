@@ -33,6 +33,7 @@ class HideGMRolls {
 		} else if (msg.sound) {
 			msg.sound = '';
 		}
+		html.addClass('gm-roll-hidden');
 		html.hide();
 	}
 

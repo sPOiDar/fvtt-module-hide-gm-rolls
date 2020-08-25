@@ -11,6 +11,9 @@
   "esmodules": [
     "modules/hide_gm_rolls.js"
   ],
+  "styles": [
+    "styles/hide_gm_rolls.css"
+  ],
   "languages": [
     {
       "lang": "en",
