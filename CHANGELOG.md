@@ -1,3 +1,13 @@
+# [0.2.0](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.1.3...v0.2.0) (2020-08-25)
+
+
+### Features
+
+* **compatibility:** Add CSS class on hidden rolls for future integration with Tabbed Chatlog ([e2cebdd](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/e2cebdd))
+
+
+
+
 ## [0.1.3](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.1.2...v0.1.3) (2020-08-22)
 
 
