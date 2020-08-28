@@ -25,7 +25,7 @@ class HideGMRolls {
 			return;
 		}
 		// Skip if this is a not a whisper, or if this was whispered to the user.
-		if (!msg.message.whisper || msg.message.whisper === [] || msg.message.whisper.includes(game.user._id)) {
+		if (!msg.message.whisper || msg.message.whisper.length === 0 || msg.message.whisper.includes(game.user._id)) {
 			return;
 		}
 		if (msg.message && msg.message.sound) {
