@@ -1,3 +1,13 @@
+## [0.2.2](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.2.1...v0.2.2) (2020-08-28)
+
+
+### Bug Fixes
+
+* **core:** Check whisper emptiness via length, not equality ([3b7437f](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/3b7437f))
+
+
+
+
 ## [0.2.1](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.2.0...v0.2.1) (2020-08-28)
 
 
