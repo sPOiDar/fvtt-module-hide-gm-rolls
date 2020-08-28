@@ -1,3 +1,13 @@
+## [0.2.1](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.2.0...v0.2.1) (2020-08-28)
+
+
+### Bug Fixes
+
+* **core:** Correctly handle direct whispers with multiple recipients ([6774ed1](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/6774ed1)), closes [#5](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/issues/5)
+
+
+
+
 # [0.2.0](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.1.3...v0.2.0) (2020-08-25)
 
 
