@@ -50,6 +50,11 @@ class HideGMRolls {
 		if (tooltip) {
 			tooltip.remove();
 		}
+		const total = html.find('h4.dice-total');
+		if (total) {
+			total.removeClass('critical');
+			total.removeClass('fumble');
+		}
 	}
 }
 
