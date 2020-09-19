@@ -55,6 +55,14 @@ class HideGMRolls {
 			total.removeClass('critical');
 			total.removeClass('fumble');
 		}
+		if (game.modules.get("betterrolls5e")?.active) {
+			const success = html.find('.success');
+			if (success) success.removeClass('success');
+			const failure = html.find('.failure');
+			if (failure) failure.removeClass('failure');
+			const flavor = html.find('.flavor-text.inline');
+			if (flavor) flavor.remove();
+		}
 	}
 }
 
