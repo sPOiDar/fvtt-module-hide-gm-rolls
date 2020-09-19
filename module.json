@@ -7,7 +7,7 @@
   ],
   "version": "0.3.0",
   "minimumCoreVersion": "0.6.5",
-  "compatibleCoreVersion": "0.7.1",
+  "compatibleCoreVersion": "0.7.2",
   "esmodules": [
     "modules/hide_gm_rolls.js"
   ],
