@@ -1,3 +1,18 @@
+# [0.4.0](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.3.0...v0.4.0) (2020-09-19)
+
+
+### Bug Fixes
+
+* **compatibility:** Bump core compatibility to v0.7.2 ([056ab76](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/056ab76))
+
+
+### Features
+
+* **compatibility:** Add sanitization of `Better Rolls for 5e` results ([24f6fa6](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/24f6fa6))
+
+
+
+
 # [0.3.0](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.2.2...v0.3.0) (2020-09-02)
 
 
