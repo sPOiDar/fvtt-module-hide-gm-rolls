@@ -19,7 +19,7 @@ class HideGMRolls {
 			type: Boolean,
 		});
 	}
-	static hideRoll(html, msg) {
+	static hideRoll(app, html, msg) {
 		// Skip processing if we're a GM, or the message did not originate from one.
 		if (game.user.isGM || (msg.author && !msg.author.isGM) || (!msg.author && msg.user.isGM)) {
 			return;
@@ -28,10 +28,8 @@ class HideGMRolls {
 		if (!msg.message.whisper || msg.message.whisper.length === 0 || msg.message.whisper.includes(game.user._id)) {
 			return;
 		}
-		if (msg.message && msg.message.sound) {
-			msg.message.sound = '';
-		} else if (msg.sound) {
-			msg.sound = '';
+		if (app.data?.sound) {
+			app.data.sound = null;
 		}
 		html.addClass('gm-roll-hidden');
 		html.hide();
@@ -70,9 +68,9 @@ Hooks.on('init', () => {
 	HideGMRolls.init();
 });
 
-Hooks.on('renderChatMessage', (_app, html, msg) => {
+Hooks.on('renderChatMessage', (app, html, msg) => {
 	if (game.settings.get('hide-gm-rolls', 'hide-private-rolls')) {
-		HideGMRolls.hideRoll(html, msg);
+		HideGMRolls.hideRoll(app, html, msg);
 	}
 	if (game.settings.get('hide-gm-rolls', 'sanitize-rolls')) {
 		HideGMRolls.sanitizeRoll(html, msg);
