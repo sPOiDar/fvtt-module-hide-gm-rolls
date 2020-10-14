@@ -1,3 +1,14 @@
+## [0.4.1](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.4.0...v0.4.1) (2020-10-14)
+
+
+### Bug Fixes
+
+* **audio:** Correctly disable sound for private GM rolls ([6cb1d65](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/6cb1d65))
+* **compatibility:** Bump core compat to v0.7.4 ([4b40a94](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/4b40a94))
+
+
+
+
 # [0.4.0](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.3.0...v0.4.0) (2020-09-19)
 
 
