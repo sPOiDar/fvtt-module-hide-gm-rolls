@@ -26,7 +26,7 @@ class HideGMRolls {
 
 	static hideRoll(app, html, msg) {
 		// Skip processing if we're a GM, or the message did not originate from one.
-		if (HideGMRolls.isGMMessage(msg)) {
+		if (this.isGMMessage(msg)) {
 			return;
 		}
 		// Skip if this is a not a whisper, or if this was whispered to the user.
@@ -42,7 +42,7 @@ class HideGMRolls {
 
 	static sanitizeRoll(html, msg) {
 		// Skip processing if we're a GM, or the message did not originate from one.
-		if (HideGMRolls.isGMMessage(msg)) {
+		if (this.isGMMessage(msg)) {
 			return;
 		}
 		const formula = html.find('div.dice-formula');
