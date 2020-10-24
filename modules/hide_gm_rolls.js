@@ -19,9 +19,14 @@ class HideGMRolls {
 			type: Boolean,
 		});
 	}
+
+	static isGMMessage(msg) {
+		return game.user.isGM || (msg.author && !msg.author.isGM) || (!msg.author && msg.user.isGM);
+	}
+
 	static hideRoll(app, html, msg) {
 		// Skip processing if we're a GM, or the message did not originate from one.
-		if (game.user.isGM || (msg.author && !msg.author.isGM) || (!msg.author && msg.user.isGM)) {
+		if (HideGMRolls.isGMMessage(msg)) {
 			return;
 		}
 		// Skip if this is a not a whisper, or if this was whispered to the user.
@@ -37,7 +42,7 @@ class HideGMRolls {
 
 	static sanitizeRoll(html, msg) {
 		// Skip processing if we're a GM, or the message did not originate from one.
-		if (game.user.isGM || (msg.author && !msg.author.isGM) || (!msg.author && msg.user.isGM)) {
+		if (HideGMRolls.isGMMessage(msg)) {
 			return;
 		}
 		const formula = html.find('div.dice-formula');
@@ -81,5 +86,15 @@ Hooks.on('updateChatMessage', (msg, _data, _diff, id) => {
 	if (game.settings.get('hide-gm-rolls', 'sanitize-rolls')) {
 		const html = $(`li.message[data-message-id="${id}"]`);
 		HideGMRolls.sanitizeRoll(html, msg);
+	}
+})
+
+Hooks.on('diceSoNiceRollStart', (_, context) => {
+	if (game.settings.get('hide-gm-rolls', 'sanitize-rolls')) {
+		// Skip processing if we're a GM, or the message did not originate from one.
+		if (game.user.isGM || (context.user && !context.user.isGM)) {
+			return true;
+		}
+		context.blind = true;
 	}
 })
