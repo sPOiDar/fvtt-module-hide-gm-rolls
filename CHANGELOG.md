@@ -1,3 +1,13 @@
+# [0.5.0](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.4.2...v0.5.0) (2020-10-24)
+
+
+### Features
+
+* **compatibility:** Add support for `Dice So Nice!` roll sanitizing ([bdacb78](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/bdacb78))
+
+
+
+
 ## [0.4.2](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.4.1...v0.4.2) (2020-10-22)
 
 
