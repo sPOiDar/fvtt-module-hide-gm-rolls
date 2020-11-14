@@ -2,5 +2,7 @@
 	"hide-gm-rolls.settings.sanitize-rolls.name": "Sanitize GM Rolls",
 	"hide-gm-rolls.settings.sanitize-rolls.hint": "Hide the roll formula and results for public GM rolls from players, showing only the total.",
 	"hide-gm-rolls.settings.hide-private-rolls.name": "Hide Private GM Rolls",
-	"hide-gm-rolls.settings.hide-private-rolls.hint": "Hide private GM rolls entirely from players entirely."
+	"hide-gm-rolls.settings.hide-private-rolls.hint": "Hide private GM rolls from players entirely.",
+	"hide-gm-rolls.settings.hide-item-description.name": "Hide GM item card description",
+	"hide-gm-rolls.settings.hide-item-description.hint": "Hide description on item cards when posted by the GM, in case those cards contain sensitive information."
 }

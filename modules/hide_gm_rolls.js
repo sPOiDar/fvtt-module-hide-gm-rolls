@@ -9,6 +9,7 @@ class HideGMRolls {
 			default: true,
 			type: Boolean,
 		});
+
 		game.settings.register('hide-gm-rolls', 'hide-private-rolls', {
 			name: game.i18n.localize('hide-gm-rolls.settings.hide-private-rolls.name'),
 			hint: game.i18n.localize('hide-gm-rolls.settings.hide-private-rolls.hint'),
@@ -18,6 +19,16 @@ class HideGMRolls {
 			default: true,
 			type: Boolean,
 		});
+
+		game.settings.register('hide-gm-rolls', 'hide-item-description', {
+			name: game.i18n.localize('hide-gm-rolls.settings.hide-item-description.name'),
+			hint: game.i18n.localize('hide-gm-rolls.settings.hide-item-description.hint'),
+			scope: 'world',
+			config: true,
+			restricted: true,
+			default: false,
+			type: Boolean,
+		});
 	}
 
 	static isGMMessage(msg) {
@@ -25,6 +36,8 @@ class HideGMRolls {
 	}
 
 	static hideRoll(app, html, msg) {
+		if (!game.settings.get('hide-gm-rolls', 'hide-private-rolls')) return;
+
 		// Skip processing if we're a GM, or the message did not originate from one.
 		if (this.isGMMessage(msg)) {
 			return;
@@ -41,6 +54,8 @@ class HideGMRolls {
 	}
 
 	static sanitizeRoll(html, msg) {
+		if (!game.settings.get('hide-gm-rolls', 'sanitize-rolls')) return;
+
 		// Skip processing if we're a GM, or the message did not originate from one.
 		if (this.isGMMessage(msg)) {
 			return;
@@ -67,6 +82,14 @@ class HideGMRolls {
 			if (flavor) flavor.remove();
 		}
 	}
+
+	static sanitizeCard(html, msg) {
+		if (this.isGMMessage(msg)) return;
+		if (game.settings.get('hide-gm-rolls', 'hide-item-description')) {
+			const description = html.find('div.item-card > div.card-content');
+			if (description) description.empty();
+		}
+	}
 }
 
 Hooks.on('init', () => {
@@ -74,19 +97,15 @@ Hooks.on('init', () => {
 });
 
 Hooks.on('renderChatMessage', (app, html, msg) => {
-	if (game.settings.get('hide-gm-rolls', 'hide-private-rolls')) {
-		HideGMRolls.hideRoll(app, html, msg);
-	}
-	if (game.settings.get('hide-gm-rolls', 'sanitize-rolls')) {
-		HideGMRolls.sanitizeRoll(html, msg);
-	}
+	HideGMRolls.sanitizeRoll(html, msg);
+	HideGMRolls.sanitizeCard(html, msg);
 });
 
 Hooks.on('updateChatMessage', (msg, _data, _diff, id) => {
-	if (game.settings.get('hide-gm-rolls', 'sanitize-rolls')) {
-		const html = $(`li.message[data-message-id="${id}"]`);
-		HideGMRolls.sanitizeRoll(html, msg);
-	}
+	if (!game.settings.get('hide-gm-rolls', 'sanitize-rolls') && !game.settings.get('hide-gm-rolls', 'hide-item-description')) return;
+	const html = $(`li.message[data-message-id="${id}"]`);
+	HideGMRolls.sanitizeRoll(html, msg);
+	HideGMRolls.sanitizeCard(html, msg);
 })
 
 Hooks.on('diceSoNiceRollStart', (_, context) => {
