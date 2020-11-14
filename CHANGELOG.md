@@ -1,3 +1,18 @@
+# [0.6.0](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.5.2...v0.6.0) (2020-11-14)
+
+
+### Bug Fixes
+
+* **compatibility:** Bump core compat to v0.7.7 ([66f5689](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/66f5689))
+
+
+### Features
+
+* **core:** Add option to hide GM item descriptions ([eafbd36](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/eafbd36)), closes [#7](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/issues/7)
+
+
+
+
 ## [0.5.2](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.5.1...v0.5.2) (2020-11-10)
 
 
