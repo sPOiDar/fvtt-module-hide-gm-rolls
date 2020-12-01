@@ -97,6 +97,7 @@ Hooks.on('init', () => {
 });
 
 Hooks.on('renderChatMessage', (app, html, msg) => {
+	HideGMRolls.hideRoll(app, html, msg);
 	HideGMRolls.sanitizeRoll(html, msg);
 	HideGMRolls.sanitizeCard(html, msg);
 });
