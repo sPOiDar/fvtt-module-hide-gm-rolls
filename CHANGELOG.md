@@ -1,3 +1,13 @@
+## [0.6.1](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.6.0...v0.6.1) (2020-12-01)
+
+
+### Bug Fixes
+
+* **core:** Reinstate hiding of GM private rolls after refactor ([3cb981e](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/3cb981e)), closes [#8](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/issues/8)
+
+
+
+
 # [0.6.0](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.5.2...v0.6.0) (2020-11-14)
 
 
