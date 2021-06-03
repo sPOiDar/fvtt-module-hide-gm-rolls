@@ -1,3 +1,13 @@
+## [0.6.4](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.6.3...v0.6.4) (2021-06-03)
+
+
+### Bug Fixes
+
+* **compatibility:** Bump core compat to v0.8.6 ([433dd06](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/433dd06))
+
+
+
+
 ## [0.6.3](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.6.2...v0.6.3) (2020-12-26)
 
 
