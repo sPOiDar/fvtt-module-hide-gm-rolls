@@ -43,7 +43,11 @@ class HideGMRolls {
 			return;
 		}
 		// Skip if this is a not a whisper, or if this was whispered to the user.
-		if (!msg.message.whisper || msg.message.whisper.length === 0 || msg.message.whisper.includes(game.user._id)) {
+		if (
+			!msg.message.whisper ||
+			msg.message.whisper.length === 0 ||
+			msg.message.whisper.includes(game.user._id)
+		) {
 			return;
 		}
 		if (app.data?.sound) {
@@ -73,7 +77,7 @@ class HideGMRolls {
 			total.removeClass('critical');
 			total.removeClass('fumble');
 		}
-		if (game.modules.get("betterrolls5e")?.active) {
+		if (game.modules.get('betterrolls5e')?.active) {
 			const success = html.find('.success');
 			if (success) success.removeClass('success');
 			const failure = html.find('.failure');
@@ -86,8 +90,11 @@ class HideGMRolls {
 	static sanitizeCard(html, msg) {
 		if (this.isGMMessage(msg)) return;
 		if (game.settings.get('hide-gm-rolls', 'hide-item-description')) {
-			const description = html.find('div.item-card > div.card-content');
-			if (description) description.empty();
+			const description = html.find('div.item-card div.card-content');
+			if (description) {
+				description.empty();
+				description.addClass('gm-roll-hidden');
+			}
 		}
 	}
 }
@@ -103,11 +110,15 @@ Hooks.on('renderChatMessage', (app, html, msg) => {
 });
 
 Hooks.on('updateChatMessage', (msg, _data, _diff, id) => {
-	if (!game.settings.get('hide-gm-rolls', 'sanitize-rolls') && !game.settings.get('hide-gm-rolls', 'hide-item-description')) return;
+	if (
+		!game.settings.get('hide-gm-rolls', 'sanitize-rolls') &&
+		!game.settings.get('hide-gm-rolls', 'hide-item-description')
+	)
+		return;
 	const html = $(`li.message[data-message-id="${id}"]`);
 	HideGMRolls.sanitizeRoll(html, msg);
 	HideGMRolls.sanitizeCard(html, msg);
-})
+});
 
 Hooks.on('diceSoNiceRollStart', (_, context) => {
 	if (game.settings.get('hide-gm-rolls', 'sanitize-rolls')) {
@@ -117,4 +128,4 @@ Hooks.on('diceSoNiceRollStart', (_, context) => {
 		}
 		context.blind = true;
 	}
-})
+});
