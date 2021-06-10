@@ -1,3 +1,13 @@
+# [0.7.0](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.6.4...v0.7.0) (2021-06-10)
+
+
+### Features
+
+* **compatibility:** Enable hiding item descriptions with BetterRolls5E ([ae236de](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/ae236de)), closes [#12](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/issues/12)
+
+
+
+
 ## [0.6.4](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.6.3...v0.6.4) (2021-06-03)
 
 
