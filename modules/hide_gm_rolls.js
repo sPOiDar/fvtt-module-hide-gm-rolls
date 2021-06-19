@@ -85,6 +85,16 @@ class HideGMRolls {
 			const flavor = html.find('.flavor-text.inline');
 			if (flavor) flavor.remove();
 		}
+		if (game.system.id === 'pf2e') {
+			const tags = html.find('.flavor-text div.tags');
+			if (tags) {
+				tags.remove();
+			}
+			const dmgTags = html.find('.flavor-text span.damage-tag');
+			if (dmgTags) {
+				dmgTags.remove();
+			}
+		}
 	}
 
 	static sanitizeCard(html, msg) {
