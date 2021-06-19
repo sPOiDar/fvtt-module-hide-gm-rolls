@@ -5,7 +5,7 @@
   "author": [
     "sPOiDar"
   ],
-  "version": "0.7.0",
+  "version": "0.8.0",
   "minimumCoreVersion": "0.6.5",
   "compatibleCoreVersion": "0.8.7",
   "esmodules": [
@@ -23,5 +23,5 @@
   ],
   "url": "https://github.com/sPOiDar/fvtt-module-hide-gm-rolls",
   "manifest": "https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/raw/master/module.json",
-  "download": "https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/releases/download/v0.7.0/hide-gm-rolls-v0.7.0.zip"
+  "download": "https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/releases/download/v0.8.0/hide-gm-rolls-v0.8.0.zip"
 }

@@ -1,3 +1,18 @@
+# [0.8.0](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.7.0...v0.8.0) (2021-06-19)
+
+
+### Bug Fixes
+
+* **compatibility:** Bump core compat to v0.8.7 ([6078063](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/6078063))
+
+
+### Features
+
+* **compatibility:** Add support for hiding PF2e atk/dmg tags ([6f462ee](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/6f462ee)), closes [#11](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/issues/11)
+
+
+
+
 # [0.7.0](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.6.4...v0.7.0) (2021-06-10)
 
 
