@@ -10,6 +10,16 @@ class HideGMRolls {
 			type: Boolean,
 		});
 
+		game.settings.register('hide-gm-rolls', 'sanitize-dice-so-nice', {
+			name: game.i18n.localize('hide-gm-rolls.settings.sanitize-dice-so-nice.name'),
+			hint: game.i18n.localize('hide-gm-rolls.settings.sanitize-dice-so-nice.hint'),
+			scope: 'world',
+			config: true,
+			restricted: true,
+			default: true,
+			type: Boolean,
+		});
+
 		game.settings.register('hide-gm-rolls', 'hide-private-rolls', {
 			name: game.i18n.localize('hide-gm-rolls.settings.hide-private-rolls.name'),
 			hint: game.i18n.localize('hide-gm-rolls.settings.hide-private-rolls.hint'),
@@ -131,7 +141,7 @@ Hooks.on('updateChatMessage', (msg, _data, _diff, id) => {
 });
 
 Hooks.on('diceSoNiceRollStart', (_, context) => {
-	if (game.settings.get('hide-gm-rolls', 'sanitize-rolls')) {
+	if (game.settings.get('hide-gm-rolls', 'sanitize-dice-so-nice')) {
 		// Skip processing if we're a GM, or the message did not originate from one.
 		if (game.user.isGM || (context.user && !context.user.isGM)) {
 			return true;
