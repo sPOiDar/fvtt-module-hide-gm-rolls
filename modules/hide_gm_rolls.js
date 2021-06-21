@@ -67,6 +67,40 @@ class HideGMRolls {
 		html.hide();
 	}
 
+	static _sanitizeCrits(html) {
+		const total = html.find('h4.dice-total');
+		if (total) {
+			total.removeClass('critical');
+			total.removeClass('fumble');
+		}
+	}
+
+	static _sanitizeBetterRolls5e(html) {
+		if (!game.modules.get('betterrolls5e')?.active) {
+			return;
+		}
+		const success = html.find('.success');
+		if (success) success.removeClass('success');
+		const failure = html.find('.failure');
+		if (failure) failure.removeClass('failure');
+		const flavor = html.find('.flavor-text.inline');
+		if (flavor) flavor.remove();
+	}
+
+	static _sanitizePF2e(html) {
+		if (game.system.id !== 'pf2e') {
+			return;
+		}
+		const tags = html.find('.flavor-text div.tags');
+		if (tags) {
+			tags.remove();
+		}
+		const dmgTags = html.find('.flavor-text span.damage-tag');
+		if (dmgTags) {
+			dmgTags.remove();
+		}
+	}
+
 	static sanitizeRoll(html, msg) {
 		if (!game.settings.get('hide-gm-rolls', 'sanitize-rolls')) return;
 
@@ -82,29 +116,9 @@ class HideGMRolls {
 		if (tooltip) {
 			tooltip.remove();
 		}
-		const total = html.find('h4.dice-total');
-		if (total) {
-			total.removeClass('critical');
-			total.removeClass('fumble');
-		}
-		if (game.modules.get('betterrolls5e')?.active) {
-			const success = html.find('.success');
-			if (success) success.removeClass('success');
-			const failure = html.find('.failure');
-			if (failure) failure.removeClass('failure');
-			const flavor = html.find('.flavor-text.inline');
-			if (flavor) flavor.remove();
-		}
-		if (game.system.id === 'pf2e') {
-			const tags = html.find('.flavor-text div.tags');
-			if (tags) {
-				tags.remove();
-			}
-			const dmgTags = html.find('.flavor-text span.damage-tag');
-			if (dmgTags) {
-				dmgTags.remove();
-			}
-		}
+		this._sanitizeCrits(html);
+		this._sanitizeBetterRolls5e(html);
+		this._sanitizePF2e(html);
 	}
 
 	static sanitizeCard(html, msg) {
