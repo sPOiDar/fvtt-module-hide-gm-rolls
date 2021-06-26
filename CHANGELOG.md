@@ -1,3 +1,19 @@
+# [0.9.0](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.8.0...v0.9.0) (2021-06-26)
+
+
+### Bug Fixes
+
+* **refactor:** Refactor sanitizeRolls for complexity ([23e1668](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/23e1668))
+
+
+### Features
+
+* **compatibility:** Add option to merge BetterRolls5e crit dmg cards ([6a6d768](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/6a6d768))
+* **dice:** Allow rolling Dice So Nice! for publicly sanitized rolls ([c4a4331](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/c4a4331)), closes [#10](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/issues/10)
+
+
+
+
 # [0.8.0](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.7.0...v0.8.0) (2021-06-19)
 
 
