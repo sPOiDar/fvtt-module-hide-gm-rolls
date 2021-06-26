@@ -3,6 +3,8 @@
 	"hide-gm-rolls.settings.sanitize-rolls.hint": "Hide the roll formula and results for public GM rolls from players, showing only the total.",
 	"hide-gm-rolls.settings.sanitize-dice-so-nice.name": "Sanitize Dice So Nice! GM Rolls",
 	"hide-gm-rolls.settings.sanitize-dice-so-nice.hint": "Do not roll dice for players on public GM rolls.",
+	"hide-gm-rolls.settings.sanitize-better-rolls-crit-dmg.name": "Sanitize Better Rolls 5e Crit Damage",
+	"hide-gm-rolls.settings.sanitize-better-rolls-crit-dmg.hint": "Merge base and criticial damage on BR5e critical cards, so that crits are opaque.",
 	"hide-gm-rolls.settings.hide-private-rolls.name": "Hide Private GM Rolls",
 	"hide-gm-rolls.settings.hide-private-rolls.hint": "Hide private GM rolls from players entirely.",
 	"hide-gm-rolls.settings.hide-item-description.name": "Hide GM item card description",

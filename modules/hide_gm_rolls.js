@@ -20,6 +20,16 @@ class HideGMRolls {
 			type: Boolean,
 		});
 
+		game.settings.register('hide-gm-rolls', 'sanitize-better-rolls-crit-dmg', {
+			name: game.i18n.localize('hide-gm-rolls.settings.sanitize-better-rolls-crit-dmg.name'),
+			hint: game.i18n.localize('hide-gm-rolls.settings.sanitize-better-rolls-crit-dmg.hint'),
+			scope: 'world',
+			config: true,
+			restricted: true,
+			default: true,
+			type: Boolean,
+		});
+
 		game.settings.register('hide-gm-rolls', 'hide-private-rolls', {
 			name: game.i18n.localize('hide-gm-rolls.settings.hide-private-rolls.name'),
 			hint: game.i18n.localize('hide-gm-rolls.settings.hide-private-rolls.hint'),
@@ -79,12 +89,24 @@ class HideGMRolls {
 		if (!game.modules.get('betterrolls5e')?.active) {
 			return;
 		}
+		const dieIcon = html.find('.dice-total .die-icon').remove();
+		if (dieIcon) dieIcon.remove();
 		const success = html.find('.success');
 		if (success) success.removeClass('success');
 		const failure = html.find('.failure');
 		if (failure) failure.removeClass('failure');
 		const flavor = html.find('.flavor-text.inline');
 		if (flavor) flavor.remove();
+		if (game.settings.get('hide-gm-rolls', 'sanitize-better-rolls-crit-dmg')) {
+			const total = html.find('.dice-total.red-damage');
+			if (!total) return;
+			const base = total.find('.red-base-damage');
+			const crit = total.find('.red-crit-damage');
+			if (!base || !crit) return;
+			const sum = parseInt(base.data('value')) + parseInt(crit.data('value'));
+			total.empty();
+			total.text(sum);
+		}
 	}
 
 	static _sanitizePF2e(html) {
