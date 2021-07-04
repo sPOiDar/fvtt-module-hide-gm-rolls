@@ -1,3 +1,13 @@
+## [0.9.2](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.9.1...v0.9.2) (2021-07-04)
+
+
+### Bug Fixes
+
+* **BetterRolls5e:** Correct handling of non-crit rolls when sanitizing ([6e3e0f9](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/6e3e0f9)), closes [#13](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/issues/13)
+
+
+
+
 ## [0.9.1](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.9.0...v0.9.1) (2021-06-26)
 
 
