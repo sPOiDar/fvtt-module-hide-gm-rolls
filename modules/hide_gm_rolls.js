@@ -99,10 +99,10 @@ class HideGMRolls {
 		if (flavor) flavor.remove();
 		if (game.settings.get('hide-gm-rolls', 'sanitize-better-rolls-crit-dmg')) {
 			const total = html.find('.dice-total.red-damage');
-			if (!total) return;
+			if (!total || total.length === 0) return;
 			const base = total.find('.red-base-damage');
 			const crit = total.find('.red-crit-damage');
-			if (!base || !crit) return;
+			if (!base || !crit || base.length === 0 || crit.length === 0) return;
 			const sum = parseInt(base.data('value')) + parseInt(crit.data('value'));
 			total.empty();
 			total.text(sum);
