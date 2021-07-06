@@ -1,0 +1,12 @@
+{
+	"hide-gm-rolls.settings.sanitize-rolls.name": "SL Würfe säubern",
+	"hide-gm-rolls.settings.sanitize-rolls.hint": "Versteckt die Würfel-Formel und die Ergebnisse in öffentlichen SL Würfen vor Spielern, zeigt nur die Endsumme an.",
+	"hide-gm-rolls.settings.sanitize-dice-so-nice.name": "Dice So Nice! SL Würfe säubern",
+	"hide-gm-rolls.settings.sanitize-dice-so-nice.hint": "Werfe keine Würfel für Spieler, wenn ein SL öffentlich würfelt.",
+	"hide-gm-rolls.settings.sanitize-better-rolls-crit-dmg.name": "Better Rolls 5e kritische Treffer säubern",
+	"hide-gm-rolls.settings.sanitize-better-rolls-crit-dmg.hint": "Vereine Basis -und kritischen Schaden für BR5e Wurfkarten, so dass kritische Treffer nicht einzusehen sind.",
+	"hide-gm-rolls.settings.hide-private-rolls.name": "Verstecke private SL Würfe",
+	"hide-gm-rolls.settings.hide-private-rolls.hint": "Verstecke private SL Würfe vollständig vor Spielern.",
+	"hide-gm-rolls.settings.hide-item-description.name": "Verstecke SL Gegenstandskarten-Beschreibungen",
+	"hide-gm-rolls.settings.hide-item-description.hint": "Verstecke die Beschreibungen in Gegenstandskarten (item-cards), die von einem SL erstellt werden, falls diese sensitive Informationen enthalten."
+}
