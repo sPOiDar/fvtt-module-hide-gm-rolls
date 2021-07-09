@@ -1,3 +1,13 @@
+## [0.10.1](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.10.0...v0.10.1) (2021-07-09)
+
+
+### Bug Fixes
+
+* **translation:** Add missing manifest entry for German language ([eb5623e](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/eb5623e))
+
+
+
+
 # [0.10.0](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.9.2...v0.10.0) (2021-07-06)
 
 
