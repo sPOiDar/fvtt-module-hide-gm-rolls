@@ -1,3 +1,13 @@
+# [0.10.0](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.9.2...v0.10.0) (2021-07-06)
+
+
+### Features
+
+* **translation:** Added german translation by BlueSkyBlackBird ([fe42bc8](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/fe42bc8))
+
+
+
+
 ## [0.9.2](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.9.1...v0.9.2) (2021-07-04)
 
 
