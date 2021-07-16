@@ -26,7 +26,11 @@
       "path": "lang/de.json"
     }
   ],
+  "license": "LICENSE",
+  "readme": "README.md",
   "url": "https://github.com/sPOiDar/fvtt-module-hide-gm-rolls",
+  "bugs": "https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/issues",
+  "changelog": "https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/blob/master/CHANGELOG.md",
   "manifest": "https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/raw/master/module.json",
   "download": "https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/releases/download/v0.10.1/hide-gm-rolls-v0.10.1.zip"
 }
