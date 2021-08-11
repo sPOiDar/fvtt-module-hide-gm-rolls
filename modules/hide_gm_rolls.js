@@ -16,7 +16,7 @@ class HideGMRolls {
 			scope: 'world',
 			config: true,
 			restricted: true,
-			default: false,
+			default: true,
 			type: Boolean,
 		});
 
