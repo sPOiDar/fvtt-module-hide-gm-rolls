@@ -1,3 +1,13 @@
+## [0.10.3](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.10.2...v0.10.3) (2021-08-11)
+
+
+### Reverts
+
+* Revert "fix(dice): Set default for Dice So Nice public roll hiding to false" ([945ecb2](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/945ecb2))
+
+
+
+
 ## [0.10.2](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.10.1...v0.10.2) (2021-08-11)
 
 
