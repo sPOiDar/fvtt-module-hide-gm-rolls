@@ -66,7 +66,7 @@ class HideGMRolls {
 		if (
 			!msg.message.whisper ||
 			msg.message.whisper.length === 0 ||
-			msg.message.whisper.includes(game.user._id)
+			msg.message.whisper.includes(game.user.id || game.user._id)
 		) {
 			return;
 		}
