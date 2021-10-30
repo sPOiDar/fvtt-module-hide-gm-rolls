@@ -61,25 +61,71 @@ class HideGMRolls {
 		});
 	}
 
-	static isGMMessage(msg) {
-		return game.user.isGM || (msg.author && !msg.author.isGM) || (!msg.author && msg.user.isGM);
+	static ready() {
+		if (!game.modules.get('lib-wrapper')?.active) {
+			if (game.user.isGM) {
+				ui.notifications.error(
+					"Module hide-gm-rolls requires the 'lib-wrapper' module. Please install and activate it.",
+				);
+			}
+			return;
+		}
+
+		libWrapper.register(
+			'hide-gm-rolls',
+			'ChatLog.prototype.notify',
+			(wrapped, ...args) => {
+				if (args.length < 1) {
+					wrapped(...args);
+					return;
+				}
+				if (this.shouldHide(args[0])) {
+					return;
+				}
+				wrapped(...args);
+			},
+			'MIXED',
+		);
 	}
 
-	static hideRoll(app, html, msg) {
-		if (!game.settings.get('hide-gm-rolls', 'hide-private-rolls')) return;
+	static isGMMessage(msg) {
+		return game.user.isGM || (msg.author && !msg.author.isGM) || (!msg.author && !msg.user.isGM);
+	}
+
+	static shouldHide(msg) {
+		if (!game.settings.get('hide-gm-rolls', 'hide-private-rolls')) return false;
+
+		// Skip if we have an empty msg
+		if (!msg) {
+			return false;
+		}
 
 		// Skip processing if we're a GM, or the message did not originate from one.
 		if (this.isGMMessage(msg)) {
-			return;
+			return false;
 		}
-		// Skip if this is a not a whisper, or if this was whispered to the user.
+
+		const whisper = msg.whisper || msg.data?.whisper || msg.message?.whisper || msg.message?.data?.whisper;
+		// Skip if this message is not a whisper
+		if (!whisper) {
+			return false;
+		}
+		// Skip if message was whispered to the current user.
 		if (
-			!msg.message.whisper ||
-			msg.message.whisper.length === 0 ||
-			msg.message.whisper.includes(game.user.id || game.user._id)
+			whisper.length === 0 ||
+			whisper.includes(game.user.id || game.user._id)
 		) {
+			return false;
+		}
+
+		return true;
+	}
+
+	static hideRoll(app, html, msg) {
+		if (!this.shouldHide(msg)) {
 			return;
 		}
+
 		if (app.data?.sound) {
 			app.data.sound = null;
 		}
@@ -172,6 +218,10 @@ class HideGMRolls {
 
 Hooks.on('init', () => {
 	HideGMRolls.init();
+});
+
+Hooks.on('ready', () => {
+	HideGMRolls.ready();
 });
 
 Hooks.on('renderChatMessage', (app, html, msg) => {

@@ -26,6 +26,11 @@
       "path": "lang/de.json"
     }
   ],
+  "dependencies": [
+    {
+      "name": "lib-wrapper"
+    }
+  ],
   "license": "LICENSE",
   "readme": "README.md",
   "url": "https://github.com/sPOiDar/fvtt-module-hide-gm-rolls",
