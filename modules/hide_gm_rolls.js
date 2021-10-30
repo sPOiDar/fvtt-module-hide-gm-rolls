@@ -50,6 +50,16 @@ class HideGMRolls {
 			type: Boolean,
 		});
 
+		game.settings.register('hide-gm-rolls', 'hide-player-rolls', {
+			name: game.i18n.localize('hide-gm-rolls.settings.hide-player-rolls.name'),
+			hint: game.i18n.localize('hide-gm-rolls.settings.hide-player-rolls.hint'),
+			scope: 'world',
+			config: true,
+			restricted: true,
+			default: false,
+			type: Boolean,
+		});
+
 		game.settings.register('hide-gm-rolls', 'hide-item-description', {
 			name: game.i18n.localize('hide-gm-rolls.settings.hide-item-description.name'),
 			hint: game.i18n.localize('hide-gm-rolls.settings.hide-item-description.hint'),
@@ -89,11 +99,15 @@ class HideGMRolls {
 	}
 
 	static isGMMessage(msg) {
-		return game.user.isGM || (msg.author && !msg.author.isGM) || (!msg.author && !msg.user.isGM);
+		return game.user.isGM || (msg.author && !msg.author.isGM) || (!msg.author && !msg.user?.isGM);
+	}
+
+	static isPlayerMessage(msg) {
+		return (msg.author?.id === game.user.id) || (!msg.author && msg.user?.id == game.user.id);
 	}
 
 	static shouldHide(msg) {
-		if (!game.settings.get('hide-gm-rolls', 'hide-private-rolls')) return false;
+		if (!game.settings.get('hide-gm-rolls', 'hide-private-rolls') && !game.settings.get('hide-gm-rolls', 'hide-player-rolls')) return false;
 
 		// Skip if we have an empty msg
 		if (!msg) {
@@ -101,7 +115,7 @@ class HideGMRolls {
 		}
 
 		// Skip processing if we're a GM, or the message did not originate from one.
-		if (this.isGMMessage(msg)) {
+		if (this.isGMMessage(msg) && !game.settings.get('hide-gm-rolls', 'hide-player-rolls')) {
 			return false;
 		}
 
@@ -115,6 +129,11 @@ class HideGMRolls {
 			whisper.length === 0 ||
 			whisper.includes(game.user.id || game.user._id)
 		) {
+			return false;
+		}
+
+		// Skip if this player originated the message
+		if (game.settings.get('hide-gm-rolls', 'hide-player-rolls') && this.isPlayerMessage(msg)) {
 			return false;
 		}
 
