@@ -20,6 +20,16 @@ class HideGMRolls {
 			type: Boolean,
 		});
 
+		game.settings.register('hide-gm-rolls', 'sanitize-crit-fail', {
+			name: game.i18n.localize('hide-gm-rolls.settings.sanitize-crit-fail.name'),
+			hint: game.i18n.localize('hide-gm-rolls.settings.sanitize-crit-fail.hint'),
+			scope: 'world',
+			config: true,
+			restricted: true,
+			default: true,
+			type: Boolean,
+		});
+
 		game.settings.register('hide-gm-rolls', 'sanitize-better-rolls-crit-dmg', {
 			name: game.i18n.localize('hide-gm-rolls.settings.sanitize-better-rolls-crit-dmg.name'),
 			hint: game.i18n.localize('hide-gm-rolls.settings.sanitize-better-rolls-crit-dmg.hint'),
@@ -78,6 +88,9 @@ class HideGMRolls {
 	}
 
 	static _sanitizeCrits(html) {
+		if (!game.settings.get('hide-gm-rolls', 'sanitize-crit-fail')) {
+			return;
+		}
 		const total = html.find('h4.dice-total');
 		if (total) {
 			total.removeClass('critical');
@@ -89,14 +102,16 @@ class HideGMRolls {
 		if (!game.modules.get('betterrolls5e')?.active) {
 			return;
 		}
+		if (game.settings.get('hide-gm-rolls', 'sanitize-crit-fail')) {
+			const success = html.find('.success');
+			if (success) success.removeClass('success');
+			const failure = html.find('.failure');
+			if (failure) failure.removeClass('failure');
+			const flavor = html.find('.flavor-text.inline');
+			if (flavor) flavor.remove();
+		}
 		const dieIcon = html.find('.dice-total .die-icon').remove();
 		if (dieIcon) dieIcon.remove();
-		const success = html.find('.success');
-		if (success) success.removeClass('success');
-		const failure = html.find('.failure');
-		if (failure) failure.removeClass('failure');
-		const flavor = html.find('.flavor-text.inline');
-		if (flavor) flavor.remove();
 		if (game.settings.get('hide-gm-rolls', 'sanitize-better-rolls-crit-dmg')) {
 			const total = html.find('.dice-total.red-damage');
 			if (!total || total.length === 0) return;
