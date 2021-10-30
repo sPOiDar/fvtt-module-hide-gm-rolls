@@ -1,3 +1,15 @@
+# [0.11.0](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.10.4...v0.11.0) (2021-10-30)
+
+
+### Features
+
+* **core:** Allow completely hiding hidden player rolls (default off) ([9fee88f](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/9fee88f)), closes [#21](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/issues/21)
+* **core:** Allow toggling sanitization of crits/fumbles (default on) ([0e807de](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/0e807de)), closes [#22](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/issues/22)
+* **core:** Hide new message indicator for hidden rolls ([cc1412a](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/cc1412a)), closes [#15](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/issues/15)
+
+
+
+
 ## [0.10.4](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.10.3...v0.10.4) (2021-08-22)
 
 
