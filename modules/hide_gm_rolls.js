@@ -103,11 +103,15 @@ class HideGMRolls {
 	}
 
 	static isPlayerMessage(msg) {
-		return (msg.author?.id === game.user.id) || (!msg.author && msg.user?.id == game.user.id);
+		return msg.author?.id === game.user.id || (!msg.author && msg.user?.id == game.user.id);
 	}
 
 	static shouldHide(msg) {
-		if (!game.settings.get('hide-gm-rolls', 'hide-private-rolls') && !game.settings.get('hide-gm-rolls', 'hide-player-rolls')) return false;
+		if (
+			!game.settings.get('hide-gm-rolls', 'hide-private-rolls') &&
+			!game.settings.get('hide-gm-rolls', 'hide-player-rolls')
+		)
+			return false;
 
 		// Skip if we have an empty msg
 		if (!msg) {
@@ -119,16 +123,14 @@ class HideGMRolls {
 			return false;
 		}
 
-		const whisper = msg.whisper || msg.data?.whisper || msg.message?.whisper || msg.message?.data?.whisper;
+		const whisper =
+			msg.whisper || msg.data?.whisper || msg.message?.whisper || msg.message?.data?.whisper;
 		// Skip if this message is not a whisper
 		if (!whisper) {
 			return false;
 		}
 		// Skip if message was whispered to the current user.
-		if (
-			whisper.length === 0 ||
-			whisper.includes(game.user.id || game.user._id)
-		) {
+		if (whisper.length === 0 || whisper.includes(game.user.id || game.user._id)) {
 			return false;
 		}
 
@@ -253,8 +255,10 @@ Hooks.on('updateChatMessage', (msg, _data, _diff, id) => {
 	if (
 		!game.settings.get('hide-gm-rolls', 'sanitize-rolls') &&
 		!game.settings.get('hide-gm-rolls', 'hide-item-description')
-	)
+	) {
 		return;
+	}
+
 	const html = $(`li.message[data-message-id="${id}"]`);
 	HideGMRolls.sanitizeRoll(html, msg);
 	HideGMRolls.sanitizeCard(html, msg);
