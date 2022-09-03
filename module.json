@@ -40,16 +40,18 @@
       "name": "lib-wrapper"
     }
   ],
-  "requires": [
-    {
-      "id": "lib-wrapper",
-      "type": "module",
-      "compatibility": {
-        "minimum": "1.2.1.0",
-        "verified": "1.12.7.2"
+  "relationships": {
+    "requires": [
+      {
+        "id": "lib-wrapper",
+        "type": "module",
+        "compatibility": {
+          "minimum": "1.2.1.0",
+          "verified": "1.12.7.2"
+        }
       }
-    }
-  ],
+    ]
+  },
   "license": "LICENSE",
   "readme": "README.md",
   "url": "https://github.com/sPOiDar/fvtt-module-hide-gm-rolls",
