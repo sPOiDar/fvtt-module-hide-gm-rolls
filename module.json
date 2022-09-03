@@ -1,13 +1,22 @@
 {
+  "id": "hide-gm-rolls",
   "name": "hide-gm-rolls",
   "title": "Hide GM Rolls",
   "description": "<p>Some GMs prefer to limit the information that players receive, to maintain the mystery. For example you may wish to hide the bonuses that your legendary creature gets on its rolls, or to roll truly in the blind when an event occurs, without alerting your players to it.</p><p>This module allows sanitizing public GM rolls by hiding formulas and breakdowns from players, showing just the total instead. It can also hide private GM rolls from players entirely.</p>",
-  "author": [
-    "sPOiDar"
+  "authors": [
+    {
+      "name": "sPOiDar",
+      "url": "https://github.com/sPOiDar/"
+    }
   ],
   "version": "0.11.1",
   "minimumCoreVersion": "0.6.5",
-  "compatibleCoreVersion": "9",
+  "compatibleCoreVersion": "10",
+  "compatibility": {
+    "minimum": "0.6.5",
+    "verified": "10.284",
+    "maximum": 10
+  },
   "esmodules": [
     "modules/hide_gm_rolls.js"
   ],
@@ -29,6 +38,16 @@
   "dependencies": [
     {
       "name": "lib-wrapper"
+    }
+  ],
+  "requires": [
+    {
+      "id": "lib-wrapper",
+      "type": "module",
+      "compatibility": {
+        "minimum": "1.2.1.0",
+        "verified": "1.12.7.2"
+      }
     }
   ],
   "license": "LICENSE",
