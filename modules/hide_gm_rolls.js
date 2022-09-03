@@ -146,9 +146,16 @@ class HideGMRolls {
 		if (!this.shouldHide(msg)) {
 			return;
 		}
+		
 
-		if (app.sound) {
-			app.sound = null;
+		if (isNewerVersion(game.version, "10")) {
+			if (app.sound) {
+				app.sound = null;
+			}
+		} else {
+			if (app.data?.sound) {
+				app.data.sound = null;
+			}
 		}
 		html.addClass('gm-roll-hidden');
 		html.hide();
