@@ -1,3 +1,13 @@
+## [0.11.3](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.11.2...v0.11.3) (2022-09-03)
+
+
+### Bug Fixes
+
+* **metadata:** Fix for incorrect manifest module relationship format ([58d1163](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/58d1163))
+
+
+
+
 ## [0.11.2](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.11.1...v0.11.2) (2022-09-03)
 
 
