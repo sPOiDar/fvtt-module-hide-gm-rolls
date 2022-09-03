@@ -1,3 +1,13 @@
+## [0.11.2](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.11.1...v0.11.2) (2022-09-03)
+
+
+### Bug Fixes
+
+* **compatibility:** Update manifest format and core compat for v10 ([15b0df0](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/15b0df0))
+
+
+
+
 ## [0.11.1](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.11.0...v0.11.1) (2021-12-25)
 
 
