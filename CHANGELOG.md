@@ -1,3 +1,13 @@
+## [0.11.4](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.11.3...v0.11.4) (2022-09-03)
+
+
+### Bug Fixes
+
+* **compatibility:** Fix document data access for v10 compat ([db24379](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/db24379))
+
+
+
+
 ## [0.11.3](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.11.2...v0.11.3) (2022-09-03)
 
 
