@@ -147,8 +147,8 @@ class HideGMRolls {
 			return;
 		}
 
-		if (app.data?.sound) {
-			app.data.sound = null;
+		if (app.sound) {
+			app.sound = null;
 		}
 		html.addClass('gm-roll-hidden');
 		html.hide();
