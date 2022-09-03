@@ -1,3 +1,13 @@
+## [0.11.5](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.11.4...v0.11.5) (2022-09-03)
+
+
+### Bug Fixes
+
+* **compatibility:** Allow sound override to continue working on < v10 ([de2022f](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/de2022f))
+
+
+
+
 ## [0.11.4](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.11.3...v0.11.4) (2022-09-03)
 
 
