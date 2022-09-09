@@ -125,13 +125,19 @@ class HideGMRolls {
 
 		const whisper =
 			msg.whisper || msg.data?.whisper || msg.message?.whisper || msg.message?.data?.whisper;
-		// Skip if this message is not a whisper
-		if (!whisper) {
-			return false;
-		}
-		// Skip if message was whispered to the current user.
-		if (whisper.length === 0 || whisper.includes(game.user.id || game.user._id)) {
-			return false;
+
+		const combatantToken = game.combat?.getCombatantByToken(msg.message?.speaker?.token);
+	
+		// if the user is a hidden combatant do not show the message to players
+		if (!combatantToken?.hidden || msg.message?.speaker?.alias == "The GM") {
+			// Skip if this message is not a whisper
+			if (!whisper) {
+				return false;
+			}
+			// Skip if message was whispered to the current user.
+			if (whisper.length === 0 || whisper.includes(game.user.id || game.user._id)) {
+				return false;
+			}
 		}
 
 		// Skip if this player originated the message
