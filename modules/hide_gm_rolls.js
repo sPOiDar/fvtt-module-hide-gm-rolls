@@ -270,8 +270,8 @@ class HideGMRolls {
 			}
 			
 			// Skip if the chat message speaker is described as The GM rather than the token
-			if (speaker?.tokenId && speaker?.alias !== "The GM") {
-				const token = game.canvas.tokens.get(tokenId);
+			if (speaker?.token && speaker?.alias !== "The GM") {
+				const token = game.canvas.tokens.get(speaker.token);
 				if (token?.document?.hidden) {
 					doc.applyRollMode('gmroll');
 				}
