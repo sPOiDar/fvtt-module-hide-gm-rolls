@@ -1,3 +1,18 @@
+# [0.12.0](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.11.5...v0.12.0) (2022-09-10)
+
+
+### Bug Fixes
+
+* **translations:** Consistently format settings names as titlecase ([be2d173](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/be2d173))
+
+
+### Features
+
+* **core:** Add option to automatically roll privately for hidden tokens ([b835af5](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/b835af5)), closes [#28](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/issues/28)
+
+
+
+
 ## [0.11.5](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.11.4...v0.11.5) (2022-09-03)
 
 
