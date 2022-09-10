@@ -254,13 +254,18 @@ class HideGMRolls {
 	}
 
 	static mangleRoll(doc, options) {
-		if (game.settings.get('hide-gm-rolls', 'private-hidden-tokens') && options.rollMode === 'publicroll') {
+		if (game.settings.get('hide-gm-rolls', 'private-hidden-tokens') && (options.rollMode === 'publicroll' || options.rollMode === undefined)) {
 			// Skip processing unless we're a GM
 			if (!game.user?.isGM) {
 				return;
 			}
 
-			const tokenId = doc.speaker?.token;
+			let tokenId;
+			if (isNewerVersion(game.version, "10")) {
+				tokenId = doc.speaker?.token;
+			} else {
+				tokenId = doc.data?.speaker?.token;
+			}
 			if (tokenId) {
 				const token = game.canvas.tokens.get(tokenId);
 				if (token?.document?.hidden) {
