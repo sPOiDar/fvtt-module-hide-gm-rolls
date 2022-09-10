@@ -1,3 +1,14 @@
+## [0.12.1](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.12.0...v0.12.1) (2022-09-10)
+
+
+### Bug Fixes
+
+* **compatibility:** Backport hidden token feature to v9 ([b459a94](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/b459a94))
+* **compatibility:** Bump verified version to 10.285 ([f9ed098](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/f9ed098))
+
+
+
+
 # [0.12.0](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.11.5...v0.12.0) (2022-09-10)
 
 
