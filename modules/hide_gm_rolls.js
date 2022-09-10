@@ -133,8 +133,7 @@ class HideGMRolls {
 			return false;
 		}
 
-		const whisper =
-			msg.whisper || msg.data?.whisper || msg.message?.whisper || msg.message?.data?.whisper;
+		const whisper = msg.whisper || msg.message?.whisper || msg.data?.whisper || msg.message?.data?.whisper;
 		// Skip if this message is not a whisper
 		if (!whisper) {
 			return false;
@@ -253,10 +252,15 @@ class HideGMRolls {
 		}
 	}
 
-	static mangleRoll(doc, options) {
-		if (game.settings.get('hide-gm-rolls', 'private-hidden-tokens') && (options.rollMode === 'publicroll' || options.rollMode === undefined)) {
+	static mangleRoll(doc) {
+		if (game.settings.get('hide-gm-rolls', 'private-hidden-tokens')) {
 			// Skip processing unless we're a GM
 			if (!game.user?.isGM) {
+				return;
+			}
+			// Skip processing if the roll is already private
+			const whisper = doc.whisper || doc.data?.whisper;
+			if (whisper && whisper.length > 0) {
 				return;
 			}
 
@@ -269,7 +273,7 @@ class HideGMRolls {
 			if (tokenId) {
 				const token = game.canvas.tokens.get(tokenId);
 				if (token?.document?.hidden) {
-					doc.applyRollMode('gmroll');
+					doc.applyRollMode(CONST.DICE_ROLL_MODES.PRIVATE);
 				}
 			}
 		}
@@ -284,8 +288,8 @@ Hooks.on('ready', () => {
 	HideGMRolls.ready();
 });
 
-Hooks.on('preCreateChatMessage', (doc, _data, options) => {
-	HideGMRolls.mangleRoll(doc, options)
+Hooks.on('preCreateChatMessage', (doc, _data, _options) => {
+	HideGMRolls.mangleRoll(doc)
 });
 
 Hooks.on('renderChatMessage', (app, html, msg) => {
