@@ -69,6 +69,16 @@ class HideGMRolls {
 			default: false,
 			type: Boolean,
 		});
+
+		game.settings.register('hide-gm-rolls', 'private-hidden-tokens', {
+			name: game.i18n.localize('hide-gm-rolls.settings.private-hidden-tokens.name'),
+			hint: game.i18n.localize('hide-gm-rolls.settings.private-hidden-tokens.hint'),
+			scope: 'world',
+			config: true,
+			restricted: true,
+			default: false,
+			type: Boolean,
+		});
 	}
 
 	static ready() {
@@ -146,7 +156,7 @@ class HideGMRolls {
 		if (!this.shouldHide(msg)) {
 			return;
 		}
-		
+
 
 		if (isNewerVersion(game.version, "10")) {
 			if (app.sound) {
@@ -242,6 +252,23 @@ class HideGMRolls {
 			}
 		}
 	}
+
+	static mangleRoll(doc, options) {
+		if (game.settings.get('hide-gm-rolls', 'private-hidden-tokens') && options.rollMode === 'publicroll') {
+			// Skip processing unless we're a GM
+			if (!game.user?.isGM) {
+				return;
+			}
+
+			const tokenId = doc.speaker?.token;
+			if (tokenId) {
+				const token = game.canvas.tokens.get(tokenId);
+				if (token?.document?.hidden) {
+					doc.applyRollMode('gmroll');
+				}
+			}
+		}
+	}
 }
 
 Hooks.on('init', () => {
@@ -250,6 +277,10 @@ Hooks.on('init', () => {
 
 Hooks.on('ready', () => {
 	HideGMRolls.ready();
+});
+
+Hooks.on('preCreateChatMessage', (doc, _data, options) => {
+	HideGMRolls.mangleRoll(doc, options)
 });
 
 Hooks.on('renderChatMessage', (app, html, msg) => {

@@ -12,5 +12,7 @@
 	"hide-gm-rolls.settings.hide-player-rolls.name": "Hide Private Player Rolls",
 	"hide-gm-rolls.settings.hide-player-rolls.hint": "Hide blind/private rolls made by players from other players.",
 	"hide-gm-rolls.settings.hide-item-description.name": "Hide GM item card description",
-	"hide-gm-rolls.settings.hide-item-description.hint": "Hide description on item cards when posted by the GM, in case those cards contain sensitive information."
+	"hide-gm-rolls.settings.hide-item-description.hint": "Hide description on item cards when posted by the GM, in case those cards contain sensitive information.",
+	"hide-gm-rolls.settings.private-hidden-tokens.name": "Roll Privately for Hidden Tokens",
+	"hide-gm-rolls.settings.private-hidden-tokens.hint": "When performing a roll as a GM for a hidden token, automatically roll privately."
 }
