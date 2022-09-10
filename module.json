@@ -14,7 +14,7 @@
   "compatibleCoreVersion": "10",
   "compatibility": {
     "minimum": "0.6.5",
-    "verified": "10.284",
+    "verified": "10.285",
     "maximum": 10
   },
   "esmodules": [
