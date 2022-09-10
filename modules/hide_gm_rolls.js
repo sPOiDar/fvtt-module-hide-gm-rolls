@@ -253,8 +253,8 @@ class HideGMRolls {
 		}
 	}
 
-	static mangleRoll(doc, options) {
-		if (game.settings.get('hide-gm-rolls', 'private-hidden-tokens') && (options.rollMode === 'publicroll' || options.rollMode === undefined)) {
+	static mangleRoll(doc, data) {
+		if (game.settings.get('hide-gm-rolls', 'private-hidden-tokens') && data.rollMode === undefined ) {
 			// Skip processing unless we're a GM
 			if (!game.user?.isGM) {
 				return;
@@ -284,8 +284,8 @@ Hooks.on('ready', () => {
 	HideGMRolls.ready();
 });
 
-Hooks.on('preCreateChatMessage', (doc, _data, options) => {
-	HideGMRolls.mangleRoll(doc, options)
+Hooks.on('preCreateChatMessage', (doc, _data) => {
+	HideGMRolls.mangleRoll(doc, _data)
 });
 
 Hooks.on('renderChatMessage', (app, html, msg) => {
