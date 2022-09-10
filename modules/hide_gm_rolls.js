@@ -253,20 +253,24 @@ class HideGMRolls {
 		}
 	}
 
-	static mangleRoll(doc, data) {
-		if (game.settings.get('hide-gm-rolls', 'private-hidden-tokens') && data.rollMode === undefined ) {
+	static mangleRoll(doc, options) {
+		// Skip if there is a defined rollMode
+		if (game.settings.get('hide-gm-rolls', 'private-hidden-tokens') && options.rollMode === undefined) {
+			
 			// Skip processing unless we're a GM
 			if (!game.user?.isGM) {
 				return;
 			}
 
-			let tokenId;
+			let speaker;
 			if (isNewerVersion(game.version, "10")) {
-				tokenId = doc.speaker?.token;
+				speaker = doc.speaker;
 			} else {
-				tokenId = doc.data?.speaker?.token;
+				speaker = doc.data?.speaker;
 			}
-			if (tokenId) {
+			
+			// Skip if the chat message speaker is described as The GM rather than the token
+			if (speaker?.tokenId && speaker?.alias !== "The GM") {
 				const token = game.canvas.tokens.get(tokenId);
 				if (token?.document?.hidden) {
 					doc.applyRollMode('gmroll');
@@ -284,7 +288,7 @@ Hooks.on('ready', () => {
 	HideGMRolls.ready();
 });
 
-Hooks.on('preCreateChatMessage', (doc, _data) => {
+Hooks.on('preCreateChatMessage', (doc, _data, options) => {
 	HideGMRolls.mangleRoll(doc, _data)
 });
 
