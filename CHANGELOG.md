@@ -1,3 +1,13 @@
+## [0.12.2](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.12.1...v0.12.2) (2022-09-10)
+
+
+### Bug Fixes
+
+* **compatibility:** Fix hidden token privacy checks on v9 ([c605071](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/c605071))
+
+
+
+
 ## [0.12.1](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.12.0...v0.12.1) (2022-09-10)
 
 
