@@ -1,0 +1,18 @@
+{
+  "hide-gm-rolls.settings.sanitize-dice-so-nice.hint": "Não role dados para jogadores em rolagens públicas de GM.",
+  "hide-gm-rolls.settings.sanitize-crit-fail.hint": "Remova as cores crit e falhas das rolagens.",
+  "hide-gm-rolls.settings.hide-private-rolls.name": "Ocultar rolagens privadas de GM",
+  "hide-gm-rolls.settings.sanitize-rolls.name": "Oculte as Rolagens do GM",
+  "hide-gm-rolls.settings.sanitize-dice-so-nice.name": "Oculte o Dice So Nice! nas Rolagens do GM",
+  "hide-gm-rolls.settings.sanitize-crit-fail.name": "Oculte as cores Crit/Falha",
+  "hide-gm-rolls.settings.sanitize-better-rolls-crit-dmg.name": "Oculte o Dano Crítico do Better Rolls 5e",
+  "hide-gm-rolls.settings.sanitize-rolls.hint": "Oculte a fórmula de rolagem e os resultados de rolagem pública do GM dos jogadores, mostrando apenas o total.",
+  "hide-gm-rolls.settings.sanitize-better-rolls-crit-dmg.hint": "Mesclar dano básico e crítico em cartões críticos BR5e, para que os críticos fiquem opacos.",
+  "hide-gm-rolls.settings.hide-player-rolls.name": "Ocultar rolagens de jogadores privados",
+  "hide-gm-rolls.settings.hide-private-rolls.hint": "Ocultar inteiramente os testes privados de GM dos jogadores.",
+  "hide-gm-rolls.settings.hide-player-rolls.hint": "Ocultar rolagens cegas/privadas feitas por jogadores de outros jogadores.",
+  "hide-gm-rolls.settings.hide-item-description.name": "Ocultar a descrição do cartão de item do GM",
+  "hide-gm-rolls.settings.hide-item-description.hint": "Oculta a descrição nas cartas de itens quando postadas pelo GM, caso essas cartas contenham informações confidenciais.",
+  "hide-gm-rolls.settings.private-hidden-tokens.name": "Role em privado para tokens ocultos",
+  "hide-gm-rolls.settings.private-hidden-tokens.hint": "Ao realizar um teste como GM para um token oculto, role automaticamente em privado."
+}
