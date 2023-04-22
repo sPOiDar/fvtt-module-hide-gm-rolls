@@ -1,3 +1,13 @@
+# [0.15.0](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.14.0...v0.15.0) (2023-04-22)
+
+
+### Features
+
+* **compatibility:** Add compatibility with Ready Set Roll 5e ([e90fff7](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/e90fff7)), closes [#35](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/issues/35)
+
+
+
+
 # [0.14.0](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.13.1...v0.14.0) (2023-04-22)
 
 
