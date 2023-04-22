@@ -207,6 +207,22 @@ class HideGMRolls {
 		}
 	}
 
+	static _sanitizeReadySetRoll5e(html) {
+		if (!game.modules.get('ready-set-roll-5e')?.active) {
+			return;
+		}
+
+		if (game.settings.get('hide-gm-rolls', 'sanitize-crit-fail')) {
+			const success = html.find('.success');
+			if (success) success.removeClass('success');
+			const failure = html.find('.failure');
+			if (failure) failure.removeClass('failure');
+		}
+
+		const dieIcon = html.find('.dice-total .die-icon').remove();
+		if (dieIcon) dieIcon.remove();
+	}
+
 	static _sanitizePF2e(html) {
 		if (game.system.id !== 'pf2e') {
 			return;
@@ -238,6 +254,7 @@ class HideGMRolls {
 		}
 		this._sanitizeCrits(html);
 		this._sanitizeBetterRolls5e(html);
+		this._sanitizeReadySetRoll5e(html);
 		this._sanitizePF2e(html);
 	}
 
