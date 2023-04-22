@@ -1,3 +1,21 @@
+# [0.14.0](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.13.1...v0.14.0) (2023-04-22)
+
+
+### Bug Fixes
+
+* **translation:** Translated using Weblate (German) ([e515ca6](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/e515ca6))
+* **translation:** Translated using Weblate (Italian) ([22c708d](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/22c708d))
+* **translation:** Translated using Weblate (Polish) ([756f4a2](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/756f4a2))
+
+
+### Features
+
+* **translation:** Added translation using Weblate (Italian) ([1ed979d](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/1ed979d))
+* **translation:** Added translation using Weblate (Polish) ([20c93a7](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/20c93a7))
+
+
+
+
 ## [0.13.1](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.13.0...v0.13.1) (2023-04-22)
 
 
