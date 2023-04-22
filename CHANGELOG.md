@@ -1,3 +1,14 @@
+## [0.13.1](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.13.0...v0.13.1) (2023-04-22)
+
+
+### Bug Fixes
+
+* **build:** Commit correct SHA to tags ([5b8cbb4](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/5b8cbb4))
+* **compatibility:** Bump core compatibility to v11 ([ac5ff59](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/ac5ff59))
+
+
+
+
 # [0.13.0](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.12.2...v0.13.0) (2022-10-09)
 
 
