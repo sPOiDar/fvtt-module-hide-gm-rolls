@@ -7,6 +7,8 @@
 	"hide-gm-rolls.settings.sanitize-crit-fail.hint": "Remove the crit and fumble colors from rolls.",
 	"hide-gm-rolls.settings.sanitize-better-rolls-crit-dmg.name": "Sanitize Better Rolls 5e Crit Damage",
 	"hide-gm-rolls.settings.sanitize-better-rolls-crit-dmg.hint": "Merge base and criticial damage on BR5e critical cards, so that crits are opaque.",
+	"hide-gm-rolls.settings.sanitize-ready-set-roll-crit-dmg.name": "Sanitize Ready Set Roll 5e Crit Damage",
+	"hide-gm-rolls.settings.sanitize-ready-set-roll-crit-dmg.hint": "Merge base and criticial damage on RSR5e critical cards, so that crits are opaque.",
 	"hide-gm-rolls.settings.hide-private-rolls.name": "Hide Private GM Rolls",
 	"hide-gm-rolls.settings.hide-private-rolls.hint": "Hide private GM rolls from players entirely.",
 	"hide-gm-rolls.settings.hide-player-rolls.name": "Hide Private Player Rolls",
