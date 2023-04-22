@@ -38,6 +38,16 @@
       "lang": "pt-BR",
       "name": "Português (Brasil)",
       "path": "lang/pt_BR.json"
+    },
+    {
+      "lang": "it",
+      "name": "Italiano",
+      "path": "lang/it.json"
+    },
+    {
+      "lang": "pl",
+      "name": "polski",
+      "path": "lang/pl.json"
     }
   ],
   "dependencies": [

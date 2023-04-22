@@ -1,0 +1,9 @@
+{
+  "hide-gm-rolls.settings.sanitize-dice-so-nice.name": "Censura i tiri di Dice So Nice! del GM",
+  "hide-gm-rolls.settings.sanitize-dice-so-nice.hint": "Non mostrare i dadi tirati ai giocatori per i tiri pubblici del GM.",
+  "hide-gm-rolls.settings.sanitize-crit-fail.name": "Censura i colori di Fallimento/Critico",
+  "hide-gm-rolls.settings.sanitize-crit-fail.hint": "Rimuovi i colori per i fallimenti e i critici.",
+  "hide-gm-rolls.settings.sanitize-better-rolls-crit-dmg.name": "Censura i danni critici di Better Rolls 5e",
+  "hide-gm-rolls.settings.sanitize-rolls.name": "Censura i tiri del GM",
+  "hide-gm-rolls.settings.sanitize-rolls.hint": "Nascondi la formula del tiro e i risultati dei tiri pubblici del GM ai giocatori, mostrando solo il totale."
+}

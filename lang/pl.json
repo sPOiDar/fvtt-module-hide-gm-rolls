@@ -1,0 +1,6 @@
+{
+  "hide-gm-rolls.settings.private-hidden-tokens.hint": "Wykonując rzut jako MG dla ukrytego tokenu, automatycznie rzucaj prywatnie.",
+  "hide-gm-rolls.settings.hide-private-rolls.name": "Ukryj prywatne rzuty MG",
+  "hide-gm-rolls.settings.hide-private-rolls.hint": "Całkowicie ukryj przed graczami prywatne rzuty MG.",
+  "hide-gm-rolls.settings.hide-player-rolls.name": "Ukryj prywatne rzuty graczy"
+}
