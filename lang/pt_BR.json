@@ -14,5 +14,7 @@
   "hide-gm-rolls.settings.hide-item-description.name": "Ocultar a descrição do cartão de item do GM",
   "hide-gm-rolls.settings.hide-item-description.hint": "Oculta a descrição nas cartas de itens quando postadas pelo GM, caso essas cartas contenham informações confidenciais.",
   "hide-gm-rolls.settings.private-hidden-tokens.name": "Role em privado para tokens ocultos",
-  "hide-gm-rolls.settings.private-hidden-tokens.hint": "Ao realizar um teste como GM para um token oculto, role automaticamente em privado."
+  "hide-gm-rolls.settings.private-hidden-tokens.hint": "Ao realizar um teste como GM para um token oculto, role automaticamente em privado.",
+  "hide-gm-rolls.settings.sanitize-ready-set-roll-crit-dmg.name": "Sanitize Ready Set Roll 5e Crit Damage",
+  "hide-gm-rolls.settings.sanitize-ready-set-roll-crit-dmg.hint": "Mesclar dano básico e crítico em cartões críticos RSR5e, para que os críticos sejam opacos."
 }
