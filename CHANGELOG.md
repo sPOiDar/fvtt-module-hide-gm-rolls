@@ -1,3 +1,13 @@
+## [0.15.3](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.15.2...v0.15.3) (2023-06-02)
+
+
+### Bug Fixes
+
+* **compatibility:** Handle multiple damage types for RSR5e crits ([c2dde9c](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/c2dde9c)), closes [#39](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/issues/39)
+
+
+
+
 ## [0.15.2](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.15.1...v0.15.2) (2023-04-28)
 
 
