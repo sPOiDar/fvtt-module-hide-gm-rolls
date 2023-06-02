@@ -235,19 +235,23 @@ class HideGMRolls {
 		if (dieIcon) dieIcon.remove();
 
 		if (game.settings.get('hide-gm-rolls', 'sanitize-ready-set-roll-crit-dmg')) {
-			const total = html.find('.dice-total.rsr-damage');
-			if (!total || total.length === 0) return;
-			const base = total.find('.rsr-base-damage');
-			const crit = total.find('.rsr-crit-damage');
-			const label = total.find('.rsr5e-roll-label');
-			if (!base || !crit || base.length === 0 || crit.length === 0) return;
-			const sum = parseInt(base.data('value')) + parseInt(crit.data('value'));
-			if (label) label.remove();
-			base.data('value', sum);
-			base.attr('data-value', sum);
-			base.text(sum);
-			total.empty();
-			total.append(base);
+			const crits = html.find('.rsr-damage > .rsr-crit-damage');
+			if (!crits || crits.length === 0) return;
+			crits.each((_, crit) => {
+				const total = crit.parentElement;
+				const base = total.querySelector('.rsr-base-damage');
+				if (!base) {
+					return;
+				}
+				const label = total.querySelector('.rsr5e-roll-label');
+				if (label) {
+					label.remove();
+				}
+				const sum = parseInt(base.dataset.value) + parseInt(crit.dataset.value);
+				base.dataset.value = sum;
+				base.textContent = sum;
+				total.replaceChildren(base);
+			});
 		}
 	}
 
