@@ -1,1 +1,20 @@
-{}
+{
+  "hide-gm-rolls.settings.sanitize-dice-so-nice.name": "Ošetřit Dice So Nice! hody GM",
+  "hide-gm-rolls.settings.sanitize-crit-fail.name": "Ošetřit Kritické/Fatální barvy",
+  "hide-gm-rolls.settings.sanitize-better-rolls-crit-dmg.name": "Ošetřit Better Rolls 5e kritické zranění",
+  "hide-gm-rolls.settings.sanitize-better-rolls-crit-dmg.hint": "Sloučení základního a kritického poškození na kritických kartách BR5e tak, aby kritické poškození bylo neprůhledné.",
+  "hide-gm-rolls.settings.sanitize-ready-set-roll-crit-dmg.name": "Ošetřit Ready Set Roll 5e kritické zranění",
+  "hide-gm-rolls.settings.hide-private-rolls.name": "Skryj soukromé hody GM",
+  "hide-gm-rolls.settings.hide-private-rolls.hint": "Úplně skryje soukromé hody GM před hráči.",
+  "hide-gm-rolls.settings.hide-player-rolls.name": "Skrýt soukromé hody hráčů",
+  "hide-gm-rolls.settings.hide-player-rolls.hint": "Skryje slepé/soukromé hody hráčů před ostatními hráči.",
+  "hide-gm-rolls.settings.hide-item-description.name": "Skrýt popis karty předmětu od GM",
+  "hide-gm-rolls.settings.private-hidden-tokens.name": "Házet soukromě pro Skryté tokeny",
+  "hide-gm-rolls.settings.sanitize-rolls.name": "Ošetřit hody GM",
+  "hide-gm-rolls.settings.sanitize-rolls.hint": "Skryje vzorec hodu a výsledky veřejných hodů GM před hráči a zobrazí pouze celkový součet.",
+  "hide-gm-rolls.settings.sanitize-dice-so-nice.hint": "Při veřejných hodech GM nehází pro hráče kostkami.",
+  "hide-gm-rolls.settings.sanitize-crit-fail.hint": "Odstraní kritické a fatální barvy z hodů.",
+  "hide-gm-rolls.settings.sanitize-ready-set-roll-crit-dmg.hint": "Sloučení základního a kritického poškození na kritických kartách RSR5e tak, aby kritické poškození bylo neprůhledné.",
+  "hide-gm-rolls.settings.hide-item-description.hint": "Skrytí popisu na kartách předmětů, pokud je vyvěsí GM, v případě, že tyto karty obsahují citlivé informace.",
+  "hide-gm-rolls.settings.private-hidden-tokens.hint": "Když GM hází za skrytý token, automaticky hází soukromě."
+}
