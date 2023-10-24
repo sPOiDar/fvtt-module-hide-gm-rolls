@@ -5,5 +5,16 @@
   "hide-gm-rolls.settings.sanitize-crit-fail.hint": "Rimuovi i colori per i fallimenti e i critici.",
   "hide-gm-rolls.settings.sanitize-better-rolls-crit-dmg.name": "Censura i danni critici di Better Rolls 5e",
   "hide-gm-rolls.settings.sanitize-rolls.name": "Censura i tiri del GM",
-  "hide-gm-rolls.settings.sanitize-rolls.hint": "Nascondi la formula del tiro e i risultati dei tiri pubblici del GM ai giocatori, mostrando solo il totale."
+  "hide-gm-rolls.settings.sanitize-rolls.hint": "Nascondi la formula del tiro e i risultati dei tiri pubblici del GM ai giocatori, mostrando solo il totale.",
+  "hide-gm-rolls.settings.sanitize-better-rolls-crit-dmg.hint": "Unire i danni base e i danni da critico sulle carte critico di BR5e, in modo che i critici siano opachi.",
+  "hide-gm-rolls.settings.hide-item-description.hint": "Nascondere la descrizione delle carte oggetto quando vengono inviate dal GM, nel caso in cui tali carte contengano informazioni sensibili.",
+  "hide-gm-rolls.settings.sanitize-ready-set-roll-crit-dmg.name": "Sanitizzare il Danno da Critico di Ready Set Roll 5e",
+  "hide-gm-rolls.settings.sanitize-ready-set-roll-crit-dmg.hint": "Unire i danni base e i danni da critico sulle carte critico di RSR5e, in modo che i critici siano opachi.",
+  "hide-gm-rolls.settings.hide-private-rolls.name": "Nascondere i Tiri Privati del GM",
+  "hide-gm-rolls.settings.hide-private-rolls.hint": "Nascondere completamente ai giocatori i tiri privati del GM.",
+  "hide-gm-rolls.settings.hide-player-rolls.name": "Nascondere i tiri privati dei giocatori",
+  "hide-gm-rolls.settings.hide-player-rolls.hint": "Nascondere agli altri giocatori i tiri nascosti/privati effettuati dai giocatori.",
+  "hide-gm-rolls.settings.hide-item-description.name": "Nascondi la Descrizione della Scheda Elemento GM",
+  "hide-gm-rolls.settings.private-hidden-tokens.name": "Tira privatamente per i token nascosti",
+  "hide-gm-rolls.settings.private-hidden-tokens.hint": "Quando si esegue un tiro come GM per un token nascosto, tira automaticamente in privato."
 }
