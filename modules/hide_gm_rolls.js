@@ -284,6 +284,10 @@ class HideGMRolls {
 		if (tooltip) {
 			tooltip.remove();
 		}
+		const total = html.find('.dice-total');
+		if (total) {
+			total.addClass('gm-roll-chevron-hidden');
+		}
 		this._sanitizeCrits(html);
 		this._sanitizeBetterRolls5e(html);
 		this._sanitizeReadySetRoll5e(html);
@@ -297,6 +301,15 @@ class HideGMRolls {
 			if (description) {
 				description.empty();
 				description.addClass('gm-roll-hidden');
+			}
+			const collapsibleDescription = html.find('div.chat-card section.card-header.description section.details.card-content');
+			if (collapsibleDescription) {
+				collapsibleDescription.empty();
+				collapsibleDescription.addClass('gm-roll-hidden');
+				const chevron = html.find('div.chat-card section.card-header.description header.summary i:last');
+				if (chevron) {
+					chevron.remove();
+				}
 			}
 		}
 	}

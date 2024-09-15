@@ -7,3 +7,9 @@
 	margin: 0;
 	padding: 0;
 }
+
+#chat-log .dice-total.gm-roll-chevron-hidden:after {
+	display: none;
+	margin: 0;
+	padding: 0;
+}
