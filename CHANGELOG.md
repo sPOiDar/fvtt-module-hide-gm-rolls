@@ -1,3 +1,13 @@
+## [0.15.4](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.15.3...v0.15.4) (2024-09-15)
+
+
+### Bug Fixes
+
+* **compatibility:** Add DND5e v3.x and FoundryVTT v12 support ([28fa86f](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/commit/28fa86f)), closes [#43](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/issues/43)
+
+
+
+
 ## [0.15.3](https://github.com/sPOiDar/fvtt-module-hide-gm-rolls/compare/v0.15.2...v0.15.3) (2023-06-02)
 
 
