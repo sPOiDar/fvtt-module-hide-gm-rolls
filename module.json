@@ -9,13 +9,13 @@
       "url": "https://github.com/sPOiDar/"
     }
   ],
-  "version": "0.15.4",
+  "version": "0.15.5",
   "minimumCoreVersion": "0.6.5",
   "compatibleCoreVersion": "11",
   "compatibility": {
     "minimum": "0.6.5",
     "verified": "12",
-    "maximum": "12"
+    "maximum": "13"
   },
   "esmodules": [
     "modules/hide_gm_rolls.js"
