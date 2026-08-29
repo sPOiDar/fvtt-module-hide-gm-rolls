@@ -14,8 +14,8 @@
   "compatibleCoreVersion": "11",
   "compatibility": {
     "minimum": "0.6.5",
-    "verified": "12",
-    "maximum": "12"
+    "verified": "14",
+    "maximum": "14"
   },
   "esmodules": [
     "modules/hide_gm_rolls.js"
