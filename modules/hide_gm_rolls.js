@@ -89,6 +89,29 @@ class HideGMRolls {
 			default: false,
 			type: Boolean,
 		});
+
+		this.registerChatRenderHook();
+	}
+
+	static registerChatRenderHook() {
+		if (Number(game.release?.generation) >= 13) {
+			Hooks.on('renderChatMessageHTML', (message, html) => {
+				this.onRenderChatCard(message, html);
+			});
+			return;
+		}
+		Hooks.on('renderChatMessage', (app, html, msg) => {
+			this.hideRoll(app, html, msg);
+			this.sanitizeRoll(html, msg);
+			this.sanitizeCard(html, msg);
+		});
+	}
+
+	static onRenderChatCard(message, html) {
+		const $html = $(html);
+		this.hideRoll(message, $html, message);
+		this.sanitizeRoll($html, message);
+		this.sanitizeCard($html, message);
 	}
 
 	static ready() {
@@ -101,9 +124,13 @@ class HideGMRolls {
 			return;
 		}
 
+		const notifyPath =
+			Number(game.release?.generation) >= 13
+				? 'foundry.applications.sidebar.tabs.ChatLog.prototype.notify'
+				: 'ChatLog.prototype.notify';
 		libWrapper.register(
 			'hide-gm-rolls',
-			'ChatLog.prototype.notify',
+			notifyPath,
 			(wrapped, ...args) => {
 				if (args.length < 1) {
 					wrapped(...args);
@@ -354,11 +381,6 @@ Hooks.on('preCreateChatMessage', (doc, _data, _options) => {
 	HideGMRolls.mangleRoll(doc)
 });
 
-Hooks.on('renderChatMessage', (app, html, msg) => {
-	HideGMRolls.hideRoll(app, html, msg);
-	HideGMRolls.sanitizeRoll(html, msg);
-	HideGMRolls.sanitizeCard(html, msg);
-});
 
 Hooks.on('updateChatMessage', (msg, _data, _diff, id) => {
 	if (
